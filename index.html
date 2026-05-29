@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mundo Verde | Plantas</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: radial-gradient(circle at top, #14532d, #0b1f14);
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    padding:15px 40px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    z-index:1000;
+}
+
+nav h2{
+    color:#4ade80;
+}
+
+nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#4ade80;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:60px;
+    color:#4ade80;
+}
+
+.hero p{
+    max-width:800px;
+    margin-top:15px;
+    font-size:18px;
+    line-height:1.7;
+    opacity:0.9;
+}
+
+.btn{
+    margin-top:25px;
+    padding:14px 30px;
+    background:#4ade80;
+    color:#0b1f14;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    background:white;
+}
+
+/* SECCIONES */
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:30px;
+    color:#4ade80;
+}
+
+/* CARDS */
+.grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap:20px;
+}
+
+.card{
+    background: rgba(255,255,255,0.08);
+    padding:25px;
+    border-radius:15px;
+    border:1px solid rgba(255,255,255,0.1);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform: translateY(-6px);
+    border-color:#4ade80;
+}
+
+.card h3{
+    color:#4ade80;
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px;
+    background:black;
+    opacity:0.7;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+    nav{
+        flex-direction:column;
+        text-align:center;
+    }
+
+    nav a{
+        margin:10px;
+        display:inline-block;
+    }
+
+    .hero h1{
+        font-size:40px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    section{
+        padding:60px 20px;
+    }
+}
+
+html{
+    scroll-behavior:smooth;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <h2>🌿 Mundo Verde</h2>
+    <div>
+        <a href="#inicio">Inicio</a>
+        <a href="#info">Información</a>
+        <a href="#ecosistema">Ecosistema</a>
+    </div>
+</nav>
+
+<section class="hero" id="inicio">
+    <h1>Las Plantas 🌱</h1>
+    <p>
+        Las plantas son seres vivos fundamentales para la vida en la Tierra.
+        Producen oxígeno, alimentan a los seres vivos y mantienen el equilibrio del ecosistema.
+        Este proyecto está desplegado en AWS EC2 con Apache.
+    </p>
+
+    <a class="btn" href="#info">Explorar</a>
+</section>
+
+<section id="info">
+    <h2 class="title">🌿 Información Importante</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Fotosíntesis</h3>
+            <p>
+                Proceso donde las plantas convierten la luz solar en energía.
+                Absorben dióxido de carbono y liberan oxígeno.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Tipos de Plantas</h3>
+            <p>
+                Existen plantas terrestres, acuáticas, tropicales, medicinales y ornamentales.
+                Cada una cumple una función en la naturaleza.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Importancia</h3>
+            <p>
+                Son la base de la cadena alimenticia y regulan el clima del planeta.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Biodiversidad</h3>
+            <p>
+                Hay millones de especies de plantas en todo el mundo, adaptadas a diferentes ecosistemas.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<section id="ecosistema">
+    <h2 class="title">🌍 Ecosistema y Medio Ambiente</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🌎 Oxígeno</h3>
+            <p>Las plantas producen el oxígeno que respiramos diariamente.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌧️ Clima</h3>
+            <p>Ayudan a regular la temperatura y la humedad del planeta.</p>
+        </div>
+
+        <div class="card">
+            <h3>🌳 Bosques</h3>
+            <p>Los bosques son esenciales para la vida y la biodiversidad.</p>
+        </div>
+
+        <div class="card">
+            <h3>♻️ Conservación</h3>
+            <p>Proteger las plantas ayuda a combatir el cambio climático.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    🌿 Proyecto AWS EC2 | Mundo Verde | Apache Server
+</footer>
+
+</body>
+</html>
